@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Tables</title>
+</head>
+<header>
+Ben's Tables
+</header>
+<body>
+  
+   <button onclick="addTable()">Add </button>
+   <button onclick="multiTable()">Multiply</button>
+
+   <script>
+      function addTable(){
+var tableWin = window.open("","MathTableDisplay",
+"toolbar=no,menubar=no,location=no,scrollbar=yes,resizable=no,width=500,height=400");
+tableWin.document.open();
+tableWin.document.write("<h1>Ben's Tables</h1>");
+ tableWin.document.write("<table border='1' width='100%'>");
+tableWin.document.write("<tr><th>&nbsp;</th>");
+
+for(var i=0;i<11;i++){
+tableWin.document.write("<th>" + i +"</th>");
+}
+tableWin.document.write("</tr>");     
+     for(var i=0;i<11;i++){
+tableWin.document.write("<tr align='center'><td>" + i +"</td>");
+for(var j=0;j<11;j++){
+tableWin.document.write("<td>" + (i+j) +"</td>");
+}
+
+tableWin.document.write("</tr>"); 
+}
+
+tableWin.document.write("</table>");
+tableWin.focus();
+}
+
+function multiTable(){
+var tableWin2 = window.open("","MathTableDisplay",
+"toolbar=no,menubar=no,location=no,scrollbar=yes,resizable=no,width=500,height=400");
+tableWin2.document.open();
+tableWin2.document.write("<h1>Ben's Tables</h1>");
+tableWin2.document.write("<table border='1' width='100%'>");
+
+
+tableWin2.document.write("<tr><th>&nbsp;</th>");
+for(var i=0;i<11;i++){
+tableWin2.document.write("<th>" + i +"</th>");
+}
+tableWin2.document.write("</tr>");      
+     for(var i=0;i<11;i++){
+tableWin2.document.write("<tr align='center'><td>" + i +"</td>");
+for(var j=0;j<11;j++){
+tableWin2.document.write("<td>" + (i*j) +"</td>");
+}
+tableWin2.document.write("</tr>"); 
+}
+tableWin2.document.write("</table>");
+tableWin2.focus();
+}
+
+
+    </script>  
+</body>
+</html>
